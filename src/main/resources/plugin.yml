@@ -1,0 +1,19 @@
+name: MakePay
+version: ${version}
+main: io.makepay.minecraft.MakePayMinecraftPlugin
+api-version: '1.21'
+description: MakePay checkout and entitlement relay for Paper and Spigot servers.
+author: MakePay
+website: https://makepay.io
+commands:
+  makepay:
+    description: Create MakePay checkout links and manage MakePay fulfillment.
+    usage: /makepay <buy|packages|reload|poll|help>
+    aliases: [mpay]
+permissions:
+  makepay.use:
+    description: Allows players to browse packages and create checkout links.
+    default: true
+  makepay.admin:
+    description: Allows operators to reload config and trigger entitlement polling.
+    default: op
